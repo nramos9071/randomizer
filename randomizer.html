@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Item Randomizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="main-title">Item Randomizer</h1>
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary"  data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://www.dndbeyond.com/" target="_blank">DnD Beyond</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="notes.html">Notes</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="missions.html">Missions</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="characters.html">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="shopmenus.html">Shop Menus</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="discovered-notes.html">Discovered Notes</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="books.html">Books</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="lore.html">Lore</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="endgame.html" style="display:none">Endgame</a>
+                    </li>
+                
+                </ul>
+                </div>
+            </div>
+        </nav>  -->
+    <!-- <nav>
+        <ul class="nav">
+            <li class="nav"><a href="index.html">Home</a></li>
+            <li class="nav"><a href="notes.html">Notes</a></li>
+            <li class="nav"><a href="missions.html">Missions</a></li>
+            <li class="nav"><a href="characters.html">Characters</a></li>
+            <li class="nav"><a href="shopmenus.html">Shop Menus</a></li>
+            <li class="nav"><a href="discovered-notes.html">Discovered Notes</a></li>
+            <li class="nav"><a href="books.html">Books</a></li>
+        </ul>
+    </nav> -->
+    </header>
+
+    <main>
+        <!-- <h1>Item Randomizer</h1> -->
+
+        <div>
+            <h2>Found Items</h2>
+            <div>
+                <section>
+                <button onclick="generateItems()" id="randomizeButton">Get Items</button>
+                </section>
+                <section id="foundItems"></section>
+                
+            </div>
+          
+        </div>
+
+        <div>
+            <label>How many items?</label>
+            <input type="number" id="itemCount" name="itemCount" value ="1" min="1" max="10">
+        </div>
+
+         <h2>Available Items</h2>
+
+        <div class="item-container">
+           
+
+            <section>   
+                
+                <h3> Potions/Buffing Items</h3>
+                
+                <input type="checkbox" id="potion1" name="potion1" value="Healing Potion"> Healing Potion<br>
+                               
+                <input type="checkbox" id="potion2" name="potion2" value="Mana Potion"> Mana Potion<br>
+
+                <input type="checkbox" id="potion3" name="potion3" value="Wild Magic Potion"> Wild Magic Potion<br>  
+
+                <input type="checkbox" id="potion4" name="potion4" value="Healing Salve"> Healing Salve<br> 
+
+                <input type="checkbox" id="potion5" name="potion5" value="Rations"> Rations<br> 
+
+                <input type="checkbox" id="potion6" name="potion6" value="Greater Rations"> Greater Rations<br> 
+
+                <input type="checkbox" id="potion7" name="potion7" value="Potion of Vigor"> Potion of Vigor<br>
+
+                <input type="checkbox" id="potion8" name="potion8" value="Vile Poison"> Vile Poison<br>
+
+                <input type="checkbox" id="potion9" name="potion9" value="Animal Speak"> Animal Speak<br>
+
+                <input type="checkbox" id="potion6" name="potion6" value="Greater Rations"> Greater Rations<br>
+
+
+                
+                
+                
+            </section>
+
+            <section>
+
+                <h3> Meats</h3>
+
+                
+                <input type="checkbox" id="meat1" name="meat1" value="Dried Owlbear Meat"> Dried Owlbear Meat<br>
+
+                <input type="checkbox" id="meat2" name="meat2" value="Dried Meat"> Dried Meat<br>
+            
+            </section>  
+            <section>
+                <h3> Herbs</h3>
+
+                <input type="checkbox" id="herb1" name="herb1" value="Lavendar"> Lavender<br>
+
+                <input type="checkbox" id="herb2" name="herb2" value="Honey"> Honey<br>
+
+                <input type="checkbox" id="herb3" name="herb3" value="Ginseng"> Ginseng<br>
+
+                <input type="checkbox" id="herb4" name="herb4" value="Goodberry"> Goodberry<br>
+
+                <input type="checkbox" id="herb5" name="herb5" value="Green Herb"> Green Herb*<br>
+
+                <input type="checkbox" id="herb6" name="herb6" value="Red Herb"> Red Herb*<br>
+
+                <input type="checkbox" id="herb7" name="herb7" value="Blue Herb"> Blue Herb*<br>
+
+
+            </section>
+
+            <section>
+                <h3> Money</h3>
+
+                <input type="checkbox" id="money1" name="money1" value="25 Copper"> 25 Copper<br>
+                
+                <input type="checkbox" id="money2" name="money2" value="2 Silver"> 2 Silver<br>
+              
+                <input type="checkbox" id="money3" name="money3" value="1 Gold"> 1 Gold<br>
+                
+                <input type="checkbox" id="money4" name="money4" value="10 Gold"> 10 Gold<br>
+
+                <input type="checkbox" id="money5" name="money5" value="20 Gold"> 20 Gold<br>
+
+                <input type="checkbox" id="money6" name="money6" value="50 Gold"> 50 Gold<br>
+
+                <input type="checkbox" id="money7" name="money7" value="60 Gold"> 60 Gold<br>
+
+                <input type="checkbox" id="money8" name="money8" value="100 Gold"> 100 Gold<br>
+
+                <input type="checkbox" id="money9" name="money9" value="200 Gold"> 200 Gold<br>
+
+                <input type="checkbox" id="money10" name="money10" value="300 Gold"> 300 Gold<br>
+
+
+
+            </section>
+            <section>
+                <h3> Weapons/Armor</h3>
+
+                <input type="checkbox" id="weapon1" name="weapon1" value="Short Sword"> Short Sword<br>
+
+                <input type="checkbox" id="weapon2" name="weapon2" value="Long Sword"> Long Sword<br>
+
+                <input type="checkbox" id="weapon3" name="weapon3" value="Great Sword"> Great Sword<br>
+
+                <input type="checkbox" id="weapon4" name="weapon4" value="Battle Axe"> Battle Axe<br>
+
+                <input type="checkbox" id="weapon5" name="weapon5" value="Short Bow"> Short Bow<br>
+
+                <input type="checkbox" id="weapon6" name="weapon6" value="Long Bow"> Long Bow<br>
+
+                <input type="checkbox" id="armor1" name="armor1" value="Leather Armor"> Leather Armor<br>
+
+                <input type="checkbox" id="armor2" name="armor2" value="Chain Mail"> Chain Mail<br>
+
+                <input type="checkbox" id="armor3" name="armor3" value="Plate Mail"> Plate Armor<br>
+
+
+
+            </section>
+
+            <section>
+                <h3> Hides</h3>
+
+                <input type="checkbox" id="hide1" name="hide1" value="Dire Wolf Hide"> Dire Wolf Hide<br>
+
+                <input type="checkbox" id="hide2" name="hide2" value="Hide"> Hide<br>
+
+                <input type="checkbox" id="hide3" name="hide3" value="Owlbear Hide">Owlbear Hide<br>
+
+
+
+
+            </section>
+
+            <section>
+                <h3> Miscellaneous</h3>
+
+                <input type="checkbox" id="misc1" name="misc1" value="Bee Wax"> Bee Wax<br>
+
+            </section>
+
+            <section>
+                <h3> Scrolls</h3>
+
+                <input type="checkbox" id="scroll1" name="scroll1" value="Scroll of Cure Wounds"> Scroll of Cure Wounds<br>
+
+                <input type="checkbox" id="scroll2" name="scroll2" value="Scroll of Fireball"> Scroll of Fireball<br>
+
+                <input type="checkbox" id="scroll3" name="scroll3" value="Scroll of Speak with Animals"> Scroll of Speak with Animals<br>
+
+                <input type="checkbox" id="scroll4" name="scroll4" value="Scroll of Zone of Truth"> Scroll of Zone of Truth<br>
+
+                <input type="checkbox" id="scroll5" name="scroll5" value="Scroll of Misty Step"> Scroll of Misty Step<br>
+
+                <input type="checkbox" id="scroll6" name="scroll6" value="Scroll of Firebolt"> Scroll of Firebolt<br>
+
+                <input type="checkbox" id="scroll7" name="scroll7" value="Scroll of Thorn Whip"> Scroll of Thorn Whip<br>
+
+                <input type="checkbox" id="scroll8" name="scroll8" value="Scroll of Lightning Bolt"> Scroll of Lightning Bolt<br>
+
+                <input type="checkbox" id="scroll9" name="scroll9" value="Scroll of Toll the Dead"> Scroll of Toll the Dead<br>
+
+
+            </section>
+            
+        </div>
+
+    </main>
+
+    <script src="randomizer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>

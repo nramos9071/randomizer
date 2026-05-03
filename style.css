@@ -1,0 +1,125 @@
+header {
+    padding: 0px
+}
+
+body {
+    background-color: rgb(44, 9, 68);
+    color: white;
+    /* margin: 50px; */
+}
+
+main {
+    margin: 50px;
+}
+
+mark {
+    background-color: yellow;
+}
+
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+}
+
+.city-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.city-title {
+    text-decoration: underline;
+}
+
+.store-menu{
+    padding: 20px;
+}
+
+.notes {
+    display: flex;
+    padding: 50px
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-title {
+  font-family: "Uncial Antiqua", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px 0px 0px 10px;
+}
+
+.completed {
+    text-decoration: none;
+}
+
+.new{
+    background-color: yellow;
+    color: black;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+ul li.completed {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul li.completed::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: green;
+}
+
+ul li.failed {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul li.failed::before {
+  content: "\2716\FE0E"; /* U+2716 + VS-15 => text presentation of ✖ */
+  color: red;
+  font-family: Arial, sans-serif;
+}
+
+#days-together{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#number-days {
+    padding: 20px;
+    font-size: 40px;
+
+}
+
+#sessions{
+    list-style-type: none;
+}
+
+#nope-items {
+    text-decoration: line-through;
+}
+
+
+    
+
+@media screen and (max-width: 600px) {
+    .nav {
+        display: block;
+    }
+    
+}
