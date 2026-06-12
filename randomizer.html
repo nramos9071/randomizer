@@ -115,7 +115,7 @@
 
                 <input type="checkbox" id="potion9" name="potion9" value="Animal Speak"> Animal Speak<br>
 
-                <input type="checkbox" id="potion6" name="potion6" value="Greater Rations"> Greater Rations<br>
+                <input type="checkbox" id="potion6" name="potion6" value="Greater Rations"> Greater Healing Potion<br>
 
 
                 
@@ -194,11 +194,25 @@
 
                 <input type="checkbox" id="weapon6" name="weapon6" value="Long Bow"> Long Bow<br>
 
+                <input type="checkbox" id="weapon7" name="weapon7" value="+1 Short Sword"> +1 Short Sword<br>
+
+                <input type="checkbox" id="weapon8" name="weapon8" value="+1 Long Sword"> +1 Long Sword<br>
+
+                <input type="checkbox" id="weapon9" name="weapon9" value="+1 Great Sword"> +1 Great Sword<br>
+
+                <input type="checkbox" id="weapon10" name="weapon10" value="+1 Battle Axe"> +1 Battle Axe<br>
+
+                <input type="checkbox" id="weapon11" name="weapon11" value="+1 Short Bow"> +1 Short Bow<br>
+
+                <input type="checkbox" id="weapon12" name="weapon12" value="+1 Long Bow"> +1 Long Bow<br>
+
                 <input type="checkbox" id="armor1" name="armor1" value="Leather Armor"> Leather Armor<br>
 
                 <input type="checkbox" id="armor2" name="armor2" value="Chain Mail"> Chain Mail<br>
 
                 <input type="checkbox" id="armor3" name="armor3" value="Plate Mail"> Plate Armor<br>
+
+                <input type="checkbox" id="armor4" name="armor4" value="+1 Hide Armor"> +1 Hide Armor<br>
 
 
 
@@ -213,6 +227,8 @@
 
                 <input type="checkbox" id="hide3" name="hide3" value="Owlbear Hide">Owlbear Hide<br>
 
+                <input type="checkbox" id="hide4" name="hide4" value="Drake Hide"> Dark Weaver Hide<br>
+
 
 
 
@@ -222,6 +238,22 @@
                 <h3> Miscellaneous</h3>
 
                 <input type="checkbox" id="misc1" name="misc1" value="Bee Wax"> Bee Wax<br>
+
+                <input type="checkbox" id="misc2" name="misc2" value="Dark Weaver Venom"> Dark Weaver Venom<br>
+
+                <input type="checkbox" id="misc3" name="misc3" value="Ring of Strength"> Ring of Strength<br>
+
+                <input type="checkbox" id="misc4" name="misc4" value="Ring of Dexterity"> Ring of Dexterity<br>
+
+                <input type="checkbox" id="misc5" name="misc5" value="Ring of Intelligence"> Ring of Intelligence<br>
+
+                <input type="checkbox" id="misc6" name="misc6" value="Ring of Charisma"> Ring of Charisma<br>
+
+                <input type="checkbox" id="misc7" name="misc7" value="Ring of Wisdom"> Ring of Wisdom<br>
+
+                <input type="checkbox" id="misc8" name="misc8" value="Ring of Constitution"> Ring of Constitution<br>
+
+
 
             </section>
 
@@ -248,7 +280,47 @@
 
 
             </section>
+
+            <section>
+                <h3>Bad Items</h3>
+
+                <input type="checkbox" id="bad1" name="bad1" value="Mimic Coin"> 1 Mimic Coin<br>
+
+                <input type="checkbox" id="bad2" name="bad2" value="Sword of the Dead"> Sword of the Dead<br>
+
+            </section>
             
+        </div>
+
+        <div>
+            <section>
+            <h3>Mimic?</h3>
+            </section>
+            <section>
+                <label>
+                    <input type="checkbox" id="mimicWord1Enabled" checked>
+                    Yes
+                </label>
+                <input type="text" id="mimicWord1" value="Mimic">
+                <label>Weight</label>
+                <input type="number" id="mimicWeight1" value="100" min="0">
+            </section>
+            <section>
+                <label>
+                    <input type="checkbox" id="mimicWord2Enabled" checked>
+                    Not a Mimic
+                </label>
+                <input type="text" id="mimicWord2" value="Not a Mimic">
+                <label>Weight</label>
+                <input type="number" id="mimicWeight2" value="100" min="0">
+            </section>
+            <section>
+                <button onclick="generateMimic()" id="mimicButton">Check</button>
+            </section>
+            <section>
+                <div id="mimicResult">It is...</div>
+            </section>
+
         </div>
 
     </main>
