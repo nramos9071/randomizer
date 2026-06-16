@@ -1,7 +1,7 @@
 
 function generateItems() {
     const resultsDiv = document.getElementById('foundItems');
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const checkboxes = document.querySelectorAll('.item-container input[type="checkbox"]:checked');
     const selectedWords = Array.from(checkboxes).map((checkbox) => checkbox.value);
     const itemCountInput = document.getElementById('itemCount');
     const numToSelect = parseInt(itemCountInput.value, 10);
@@ -11,13 +11,18 @@ function generateItems() {
     }
 
     if (selectedWords.length === 0) {
+
+        
         resultsDiv.innerHTML = '<p>Please select at least one item.</p>';
         return;
     }
 
     const shuffled = [...selectedWords].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, numToSelect);
+    const selectedId= Array.from(checkboxes).filter((checkbox) => selected.includes(checkbox.value)).map((checkbox) => checkbox.id);
 
+    console.log('Selected items:', selected);
+    console.log('Selected IDs:', selectedId);
     resultsDiv.innerHTML = 'Results ' + selected.join(', ');
 }
 
